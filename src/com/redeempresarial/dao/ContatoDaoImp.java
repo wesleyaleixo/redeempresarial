@@ -22,8 +22,6 @@ public class ContatoDaoImp implements ContatoDao {
         sessao.save(contato);
         t.commit();
         
-        sessao.close();
-        
     }
     
     public Contato getContato(long id) {
@@ -51,8 +49,6 @@ public class ContatoDaoImp implements ContatoDao {
         sessao.delete(contato);
         t.commit();
         
-        sessao.close();
-        
     }
     
     public void update(Contato contato) {
@@ -61,8 +57,6 @@ public class ContatoDaoImp implements ContatoDao {
         Transaction t = sessao.beginTransaction();
         sessao.update(contato);
         t.commit();
-        
-        sessao.close();
-        
+
     }
 }
